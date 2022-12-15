@@ -1,6 +1,10 @@
+using MongoDB.Driver;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.Configure<MongoDatabaseSettings>(
+    builder.Configuration.GetSection("MongoDatabase"));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
