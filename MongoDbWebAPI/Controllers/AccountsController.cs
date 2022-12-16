@@ -54,7 +54,7 @@ namespace MongoDbWebAPI.Controllers
 
             updatedAccount.Id = account.Id;
 
-            await _accountService.UpdateAsync(id, account);
+            await _accountService.UpdateAsync(id, updatedAccount);
 
             return NoContent();
         }
