@@ -3,6 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace MongoDbWebAPI.Models
 {
+    [BsonIgnoreExtraElements]
     public class Account : BaseModel
     {
         [BsonElement("account_id")]
