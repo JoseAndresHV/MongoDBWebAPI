@@ -1,4 +1,4 @@
-﻿namespace MongoDbWebAPI.Models
+﻿namespace MongoDbWebAPI.Options
 {
     public class MongoDatabaseOptions
     {

@@ -4,7 +4,7 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace MongoDbWebAPI.Models
 {
     [BsonIgnoreExtraElements]
-    public class Customer : BaseModel
+    public class Customer : Base
     {
         [BsonElement("username")]
         public string Username { get; set; } = null!;

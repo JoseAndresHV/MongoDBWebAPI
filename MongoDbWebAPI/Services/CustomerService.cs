@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Options;
 using MongoDbWebAPI.Models;
+using MongoDbWebAPI.Options;
 
 namespace MongoDbWebAPI.Services
 {

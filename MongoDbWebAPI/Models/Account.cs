@@ -4,7 +4,7 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace MongoDbWebAPI.Models
 {
     [BsonIgnoreExtraElements]
-    public class Account : BaseModel
+    public class Account : Base
     {
         [BsonElement("account_id")]
         public int AccountId { get; set; }

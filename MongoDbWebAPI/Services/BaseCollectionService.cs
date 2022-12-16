@@ -3,7 +3,7 @@ using MongoDbWebAPI.Models;
 
 namespace MongoDbWebAPI.Services
 {
-    public class BaseCollectionService<T> where T : BaseModel
+    public class BaseCollectionService<T> where T : Base
     {
         protected readonly IMongoCollection<T> _collection;
 
