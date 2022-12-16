@@ -1,4 +1,4 @@
-using MongoDbWebAPI.Models;
+using MongoDbWebAPI.Options;
 using MongoDbWebAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,9 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<MongoDatabaseOptions>(
     builder.Configuration.GetSection(nameof(MongoDatabaseOptions)));
 
-builder.Services.AddSingleton<AccountService>();
-builder.Services.AddSingleton<CustomerService>();
-builder.Services.AddSingleton<TransactionService>();
+builder.Services.AddScoped<AccountService>();
+builder.Services.AddScoped<CustomerService>();
+builder.Services.AddScoped<TransactionService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
