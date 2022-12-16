@@ -3,12 +3,8 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace MongoDbWebAPI.Models
 {
-    public class Transaction
+    public class Transaction : BaseModel
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string? Id { get; set; }
-
         [BsonElement("account_id")]
         public int AccountId { get; set; }
 
@@ -23,5 +19,26 @@ namespace MongoDbWebAPI.Models
 
         [BsonElement("transactions")]
         public IEnumerable<TransactionDetail> Transactions { get; set; } = null!;
+
+        public class TransactionDetail
+        {
+            [BsonElement("date")]
+            public DateTime Date { get; set; }
+
+            [BsonElement("amount")]
+            public int Amount { get; set; }
+
+            [BsonElement("transaction_code")]
+            public string TransactionCode { get; set; } = null!;
+
+            [BsonElement("symbol")]
+            public string Symbol { get; set; } = null!;
+
+            [BsonElement("price")]
+            public string Price { get; set; } = null!;
+
+            [BsonElement("total")]
+            public string Total { get; set; } = null!;
+        }
     }
 }

@@ -3,12 +3,8 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace MongoDbWebAPI.Models
 {
-    public class Customer
+    public class Customer : BaseModel
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string? Id { get; set; }
-
         [BsonElement("username")]
         public string Username { get; set; } = null!;
 
