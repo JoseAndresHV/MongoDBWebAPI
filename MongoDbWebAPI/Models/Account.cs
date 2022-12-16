@@ -12,6 +12,6 @@ namespace MongoDbWebAPI.Models
         public int Limit { get; set; }
 
         [BsonElement("products")]
-        public IEnumerable<int> Products { get; set; } = null!;
+        public IEnumerable<string> Products { get; set; } = null!;
     }
 }
