@@ -1,7 +1,7 @@
 # MongoDbWebAPI
 An `ASP.NET Core 6.0` `Web API` project with a `MongoDB` `Atlas Database` (`NoSQL`) using its `Sample Analytics` dataset, which contains three collections for a typical financial services application: customers, accounts, and transactions.
 
-### Highlights
+### Featured
 - MVC + Service Pattern
 - CRUD methods abstraction for services
 - Options Pattern
